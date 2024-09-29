@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :lists, except: [ :edit, :update ] do
-    resources :bookmarks, only: [ :new, :create, :destroy ]
+    resources :bookmarks, only: [:new, :create, :destroy]
   end
 end
